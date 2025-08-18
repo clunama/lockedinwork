@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI - La Nueva Era de Automatización Inteligente</title>
+    <meta name="description" content="Agentes de IA conversacionales + Automatización de procesos en una sola plataforma. Combinamos lo mejor de la IA y la automatización en una experiencia única.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB;
+            color: #11182A;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .text-subtitle { color: #4B5563; }
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5, #7C3AED, #DB2777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Estilos para el Acordeón de FAQs */
+        .faq-question { cursor: pointer; }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+            padding: 0 1.5rem;
+        }
+        .faq-item.active .faq-answer { padding-top: 0.5rem; padding-bottom: 1.5rem; }
+        .faq-item.active .icon-plus { transform: rotate(45deg); }
+        .icon-plus { transition: transform 0.3s ease; }
+        
+        /* Carrusel de Logos */
+        .logo-scroller {
+            overflow: hidden;
+            position: relative;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .scroller-inner {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .logo-scroller:hover .scroller-inner { animation-play-state: paused; }
+        .logo-item { padding: 0 2.5rem; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===== HEADER (INTEGRADO) ===== -->
+    <header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80 relative">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
+            <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
+                <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a>
+                <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
+                <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a>
+                <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
+                <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="#contact" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+                <a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+        </div>
+        <div id="dropdown-panel" class="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg opacity-0 pointer-events-none">
+            <div id="dropdown-content" class="container mx-auto px-6 py-4 flex justify-center items-center space-x-8 text-gray-700 font-medium"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO SECTION ===== -->
+        <section class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
+                    La nueva era de <br>
+                    <span id="typing-effect" class="gradient-text">automatización inteligente.</span>
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-subtitle">
+                    Agentes de IA conversacionales + Automatización de procesos en una sola plataforma.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#pricing" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/20">
+                        Probar gratis
+                    </a>
+                    <a href="#demo" class="bg-white text-gray-800 font-semibold px-8 py-3 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all duration-300">
+                        Ver demo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== LOGO MARQUEE ===== -->
+        <section class="pb-16">
+            <div class="container mx-auto px-6">
+                <p class="text-center text-sm font-bold text-gray-500 uppercase tracking-widest">INTEGRADO CON LAS HERRAMIENTAS QUE YA USAS</p>
+                <div class="logo-scroller mt-10">
+                     <div class="scroller-inner">
+                        <div class="logo-item"><img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-1.svg" alt="Google" class="h-8 w-auto grayscale opacity-60 hover:opacity-100 transition"></div>
+                        <div class="logo-item"><img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-2.svg" alt="Slack" class="h-8 w-auto grayscale opacity-60 hover:opacity-100 transition"></div>
+                        <div class="logo-item"><img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-3.svg" alt="Salesforce" class="h-8 w-auto grayscale opacity-60 hover:opacity-100 transition"></div>
+                        <div class="logo-item"><img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-4.svg" alt="Zapier" class="h-8 w-auto grayscale opacity-60 hover:opacity-100 transition"></div>
+                        <div class="logo-item"><img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-5.svg" alt="Hubspot" class="h-8 w-auto grayscale opacity-60 hover:opacity-100 transition"></div>
+                        <div class="logo-item"><img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-6.svg" alt="Stripe" class="h-8 w-auto grayscale opacity-60 hover:opacity-100 transition"></div>
+                        <div class="logo-item"><img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-1.svg" alt="Google" class="h-8 w-auto grayscale opacity-60 hover:opacity-100 transition"></div>
+                        <div class="logo-item"><img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-2.svg" alt="Slack" class="h-8 w-auto grayscale opacity-60 hover:opacity-100 transition"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== BENEFICIOS ===== -->
+        <section id="benefits" class="py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <p class="font-bold text-indigo-600 uppercase tracking-widest">NUESTRA PLATAFORMA</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3">Una plataforma, infinitas posibilidades</h2>
+                 <p class="mt-4 max-w-2xl mx-auto text-lg text-subtitle">Combinamos lo mejor de la IA y la automatización en una experiencia única.</p>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
+                        <div class="bg-indigo-100 text-indigo-600 w-14 h-14 rounded-full flex items-center justify-center mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
+                        <h3 class="mt-5 text-xl font-bold">Conversación Natural</h3>
+                        <p class="mt-2 text-subtitle text-sm">Agentes que entienden, razonan y responden con la fluidez de un humano.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
+                        <div class="bg-indigo-100 text-indigo-600 w-14 h-14 rounded-full flex items-center justify-center mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+                        <h3 class="mt-5 text-xl font-bold">Transparencia y Seguridad</h3>
+                        <p class="mt-2 text-subtitle text-sm">Control total sobre los datos y procesos, con explicaciones claras en cada paso.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
+                        <div class="bg-indigo-100 text-indigo-600 w-14 h-14 rounded-full flex items-center justify-center mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h-3.218c.387.52.835 1.001 1.325 1.453M12 21a9.004 9.004 0 008.06-4.5M3 15h12M9 12v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h-3.218c.387.52.835 1.001 1.325 1.453M12 21a9.004 9.004 0 008.06-4.5"/></svg></div>
+                        <h3 class="mt-5 text-xl font-bold">Multicanal e Integración</h3>
+                        <p class="mt-2 text-subtitle text-sm">Conecta con tus herramientas y canales (Web, WhatsApp, Slack, Voz).</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
+                        <div class="bg-indigo-100 text-indigo-600 w-14 h-14 rounded-full flex items-center justify-center mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></div>
+                        <h3 class="mt-5 text-xl font-bold">Automatización Robusta</h3>
+                        <p class="mt-2 text-subtitle text-sm">Crea flujos de trabajo complejos y escalables con una interfaz visual intuitiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== DEMO INTERACTIVA ===== -->
+        <section id="demo" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="font-bold text-indigo-600 uppercase tracking-widest">IA EN ACCIÓN</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3">Experimenta el poder en directo</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-subtitle">Mira cómo la conversación y la automatización se unen para ejecutar tareas reales.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="bg-white border border-gray-200 rounded-2xl p-6 h-full flex flex-col shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center font-bold text-white text-sm">AI</div>
+                            <div class="ml-3">
+                                <p class="font-semibold text-gray-900">Nexus Agent</p>
+                                <p class="text-sm text-green-600">● Online</p>
+                            </div>
+                        </div>
+                        <div class="flex-grow space-y-4 overflow-y-auto pr-2">
+                            <div class="flex justify-start"><div class="bg-gray-100 rounded-lg p-3 max-w-xs"><p class="text-sm text-gray-800">Hola, ¿cómo puedo ayudarte hoy?</p></div></div>
+                            <div class="flex justify-end"><div class="bg-indigo-600 text-white rounded-lg p-3 max-w-xs"><p class="text-sm">Quiero generar un reporte de ventas del último trimestre para el equipo de EMEA.</p></div></div>
+                            <div class="flex justify-start"><div class="bg-gray-100 rounded-lg p-3 max-w-md"><p class="text-sm text-gray-800">¡Entendido! Estoy accediendo a Salesforce y Google Sheets. ¿Quieres que lo envíe por email al grupo 'EMEA-Sales' cuando esté listo?</p></div></div>
+                            <div class="flex justify-end"><div class="bg-indigo-600 text-white rounded-lg p-3 max-w-xs"><p class="text-sm">Sí, perfecto. Gracias.</p></div></div>
+                        </div>
+                        <div class="mt-6 flex items-center bg-gray-100 rounded-lg p-1">
+                            <input type="text" placeholder="Tu mensaje..." class="bg-transparent w-full focus:outline-none text-gray-500 px-3 text-sm" disabled>
+                            <button class="bg-indigo-600 p-2 rounded-md hover:bg-indigo-700 transition"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" /></svg></button>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 h-full shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Workflow: Reporte Trimestral</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center bg-gray-50 p-4 rounded-lg border border-gray-200"><div class="bg-indigo-100 p-2 rounded-md"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><span class="ml-4 text-gray-800 font-medium">1. Recibir Petición (Chat)</span></div>
+                            <div class="h-8 border-l-2 border-dashed border-gray-300 ml-7"></div>
+                            <div class="flex items-center bg-gray-50 p-4 rounded-lg border border-gray-200"><div class="bg-indigo-100 p-2 rounded-md"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div><span class="ml-4 text-gray-800 font-medium">2. Extraer Datos (Salesforce API)</span></div>
+                            <div class="h-8 border-l-2 border-dashed border-gray-300 ml-7"></div>
+                            <div class="flex items-center bg-gray-50 p-4 rounded-lg border border-gray-200"><div class="bg-indigo-100 p-2 rounded-md"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div><span class="ml-4 text-gray-800 font-medium">3. Generar Gráficos (Sheets)</span></div>
+                            <div class="h-8 border-l-2 border-dashed border-gray-300 ml-7"></div>
+                            <div class="flex items-center bg-gray-50 p-4 rounded-lg border border-gray-200"><div class="bg-indigo-100 p-2 rounded-md"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div><span class="ml-4 text-gray-800 font-medium">4. Enviar Reporte (Email)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+
+        <!-- ===== FAQs ===== -->
+        <section id="faq" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-4 text-center md:text-left">
+                        <p class="font-bold text-indigo-600 uppercase tracking-widest">RESOLVEMOS TUS DUDAS</p>
+                        <h2 class="text-4xl font-bold text-gray-900 mt-3">Preguntas Frecuentes</h2>
+                    </div>
+                    <div class="md:col-span-8 space-y-4" id="faq-container">
+                        <!-- Las preguntas se generan con JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-white pt-24 pb-12 border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-8">
+                <div class="col-span-2 mb-8 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-gray-900">Nexus<span class="text-indigo-600">AI</span></a>
+                    <p class="mt-4 text-sm text-gray-500 max-w-xs">Automatización Inteligente para la nueva era.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900">Producto</h4>
+                    <ul class="mt-4 space-y-3 text-subtitle">
+                        <li><a href="#" class="hover:text-indigo-600 transition-colors">Características</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition-colors">Integraciones</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition-colors">Precios</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900">Empresa</h4>
+                    <ul class="mt-4 space-y-3 text-subtitle">
+                        <li><a href="#" class="hover:text-indigo-600 transition-colors">Sobre nosotros</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="font-bold text-gray-900">Recursos</h4>
+                    <ul class="mt-4 space-y-3 text-subtitle">
+                        <li><a href="#" class="hover:text-indigo-600 transition-colors">Documentación</a></li>
+                         <li><a href="#" class="hover:text-indigo-600 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900">Legal</h4>
+                    <ul class="mt-4 space-y-3 text-subtitle">
+                        <li><a href="#" class="hover:text-indigo-600 transition-colors">Privacidad</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition-colors">Términos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2024 Nexus AI. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Script para efecto de escritura (Typing Effect) ---
+        const words = ["automatización inteligente.", "procesos eficientes.", "experiencias conversacionales."];
+        let i = 0, j = 0, currentWord = "", isDeleting = false;
+        const typingEffectElement = document.getElementById('typing-effect');
+        function type() {
+            if (!typingEffectElement) return;
+            currentWord = words[i];
+            if (isDeleting) {
+                typingEffectElement.textContent = currentWord.substring(0, --j);
+                if (j === 0) {
+                    isDeleting = false;
+                    i = (i + 1) % words.length;
+                }
+            } else {
+                typingEffectElement.textContent = currentWord.substring(0, ++j);
+                if (j === currentWord.length) {
+                    isDeleting = true;
+                    setTimeout(type, 2000); // Pause at end of word
+                    return;
+                }
+            }
+            setTimeout(type, isDeleting ? 50 : 150);
+        }
+        type();
+
+        // --- Script para Acordeón de FAQs ---
+        const faqs = [
+            { question: "¿En qué se diferencia NexusAI de los chatbots?", answer: "Los chatbots responden preguntas. NexusAI ejecuta acciones reales en tus sistemas: agenda citas, procesa pagos y actualiza tu CRM. Es un agente activo, no un contestador pasivo." },
+            { question: "¿Qué tan compleja es la implementación?", answer: "Nos encargamos de la parte difícil. Nuestra plataforma está diseñada para una integración sencilla y ofrecemos guías y soporte para que estés funcionando en el menor tiempo posible." },
+            { question: "¿Qué integraciones soporta?", answer: "Soportamos cientos de aplicaciones a través de conexiones nativas y plataformas como Zapier. Desde Salesforce y HubSpot hasta Google Sheets y WhatsApp Business API." },
+            { question: "¿Es seguro para manejar datos sensibles de mi empresa?", answer: "Absolutamente. La seguridad es nuestra máxima prioridad. Cumplimos con los más altos estándares de la industria y te damos control total sobre los permisos y el acceso a los datos." }
+        ];
+        const faqContainer = document.getElementById('faq-container');
+        if (faqContainer) {
+            faqs.forEach(faq => {
+                const faqItem = document.createElement('div');
+                faqItem.className = 'faq-item bg-white border border-gray-200 rounded-lg transition-shadow duration-300 hover:shadow-md';
+                faqItem.innerHTML = `
+                    <div class="faq-question flex justify-between items-center p-6">
+                        <h3 class="text-lg font-semibold text-gray-900">${faq.question}</h3>
+                        <svg class="icon-plus w-6 h-6 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                    </div>
+                    <div class="faq-answer"><p class="text-subtitle">${faq.answer}</p></div>`;
+                faqContainer.appendChild(faqItem);
+            });
+            faqContainer.addEventListener('click', (e) => {
+                const questionHeader = e.target.closest('.faq-question');
+                if (!questionHeader) return;
+                const faqItem = questionHeader.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const isOpen = faqItem.classList.contains('active');
+                document.querySelectorAll('#faq-container .faq-item.active').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                        item.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+                faqItem.classList.toggle('active');
+                answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencias - Casos de Éxito de Nexus AI</title>
+    <meta name="description" content="Descubre casos de éxito reales de empresas que están transformando sus operaciones con los agentes de IA y la automatización de Nexus AI.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB;
+            color: #11182A;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .text-subtitle { color: #4B5563; }
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5, #7C3AED, #DB2777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* --- Estilos para las Tarjetas de Clientes --- */
+        .client-card {
+            position: relative;
+            background-color: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #E5E7EB;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .client-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: inherit;
+            border: 2px solid transparent;
+            background: conic-gradient(from 180deg at 50% 50%, #7C3AED, #DB2777, #4F46E5, #7C3AED) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+        .card-image-wrapper { overflow: hidden; height: 200px; }
+        .card-image-wrapper img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .client-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .client-card:hover::before { opacity: 1; }
+        .client-card:hover .card-image-wrapper img { transform: scale(1.08) rotate(1deg); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===== HEADER ===== -->
+    <header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900">Nexus<span class="text-indigo-600">AI</span></a>
+            <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
+                <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a>
+                <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
+                <a href="experiences.html" class="px-4 py-2 rounded-lg bg-gray-100 transition-colors">Experiencias</a>
+                <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
+                <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-3">
+                 <a href="#contact" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+                <a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO SECTION - EXPERIENCIAS ===== -->
+        <section class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <p class="font-bold text-indigo-600 uppercase tracking-widest">CASOS DE ÉXITO</p>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mt-3">
+                    Donde la <span class="gradient-text">innovación</span><br>genera resultados reales.
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-subtitle">
+                    Explora cómo empresas líderes en su sector utilizan NexusAI para automatizar procesos, mejorar la eficiencia y crear experiencias de cliente excepcionales.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN DE CASOS DE ÉXITO ===== -->
+        <section id="clients" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                    <!-- Tarjeta Cliente 1 -->
+                    <div class="client-card">
+                        <div class="card-image-wrapper"><img src="https://placehold.co/600x400/E5E7EB/4B5563?text=InnovateCorp" alt="Logo de InnovateCorp"></div>
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-xl font-bold text-gray-900">InnovateCorp</h3>
+                            <p class="mt-2 text-subtitle text-sm">Implementaron un agente de IA para la gestión de leads en Salesforce, reduciendo el tiempo de respuesta en un 90% y aumentando la calificación de prospectos en un 40%.</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta Cliente 2 -->
+                    <div class="client-card">
+                         <div class="card-image-wrapper"><img src="https://placehold.co/600x400/DBEAFE/1E3A8A?text=FintechGlobal" alt="Logo de FintechGlobal"></div>
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-xl font-bold text-gray-900">FintechGlobal</h3>
+                            <p class="mt-2 text-subtitle text-sm">Automatizaron el soporte al cliente de primer nivel a través de WhatsApp, resolviendo el 75% de las consultas sin intervención humana y mejorando la satisfacción del cliente (CSAT) en 15 puntos.</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta Cliente 3 -->
+                    <div class="client-card">
+                         <div class="card-image-wrapper"><img src="https://placehold.co/600x400/D1FAE5/064E3B?text=HealthWell" alt="Logo de HealthWell"></div>
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-xl font-bold text-gray-900">HealthWell</h3>
+                            <p class="mt-2 text-subtitle text-sm">Crearon un flujo de trabajo para la gestión de citas y recordatorios, integrando su sistema de agenda con SMS y Voz, lo que disminuyó las ausencias en un 25%.</p>
+                        </div>
+                    </div>
+                     <!-- Tarjeta Cliente 4 -->
+                    <div class="client-card">
+                        <div class="card-image-wrapper"><img src="https://placehold.co/600x400/FEF3C7/92400E?text=LogisticsPro" alt="Logo de LogisticsPro"></div>
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-xl font-bold text-gray-900">LogisticsPro</h3>
+                            <p class="mt-2 text-subtitle text-sm">Utilizaron NexusAI para automatizar el seguimiento de envíos y la comunicación proactiva con los clientes, mejorando la visibilidad y reduciendo las llamadas al centro de atención.</p>
+                        </div>
+                    </div>
+                     <!-- Tarjeta Cliente 5 -->
+                    <div class="client-card">
+                        <div class="card-image-wrapper"><img src="https://placehold.co/600x400/FCE7F3/831843?text=RetailFast" alt="Logo de RetailFast"></div>
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-xl font-bold text-gray-900">RetailFast</h3>
+                            <p class="mt-2 text-subtitle text-sm">Desplegaron un agente conversacional en su web para guiar a los usuarios en la compra, procesar devoluciones y responder preguntas frecuentes, aumentando la conversión en un 18%.</p>
+                        </div>
+                    </div>
+                     <!-- Tarjeta Cliente 6 -->
+                    <div class="client-card">
+                        <div class="card-image-wrapper"><img src="https://placehold.co/600x400/E0E7FF/3730A3?text=SaaSify" alt="Logo de SaaSify"></div>
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-xl font-bold text-gray-900">SaaSify</h3>
+                            <p class="mt-2 text-subtitle text-sm">Integraron NexusAI con Slack para el onboarding automatizado de nuevos empleados, asignando tareas, proveyendo recursos y respondiendo dudas iniciales de forma instantánea.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-white pt-24 pb-12 border-t border-gray-200">
+        <!-- Pega aquí el código de tu footer -->
+    </footer>
+
+</body>
+</html>
