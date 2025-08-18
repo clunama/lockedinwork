@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus AI - La Nueva Era de Automatización Inteligente</title>
+    <title>LockedInWork - La Nueva Era de Automatización Inteligente</title>
     <meta name="description" content="Agentes de IA conversacionales + Automatización de procesos en una sola plataforma. Combinamos lo mejor de la IA y la automatización en una experiencia única.">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,8 +29,6 @@
             background-clip: text;
             text-fill-color: transparent;
         }
-
-        /* Estilos para el Acordeón de FAQs */
         .faq-question { cursor: pointer; }
         .faq-answer {
             max-height: 0;
@@ -41,8 +39,6 @@
         .faq-item.active .faq-answer { padding-top: 0.5rem; padding-bottom: 1.5rem; }
         .faq-item.active .icon-plus { transform: rotate(45deg); }
         .icon-plus { transition: transform 0.3s ease; }
-        
-        /* Carrusel de Logos */
         .logo-scroller {
             overflow: hidden;
             position: relative;
@@ -81,8 +77,20 @@
             </div>
             <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
         </div>
-        <div id="dropdown-panel" class="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg opacity-0 pointer-events-none">
-            <div id="dropdown-content" class="container mx-auto px-6 py-4 flex justify-center items-center space-x-8 text-gray-700 font-medium"></div>
+        
+        <!-- PANEL DEL MENÚ MÓVIL (AHORA CON CONTENIDO) -->
+        <div id="mobile-menu-panel" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+            <div class="flex flex-col p-4 space-y-2">
+                <a href="products.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Productos</a>
+                <a href="solutions.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Soluciones</a>
+                <a href="experiences.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Experiencias</a>
+                <a href="pricing.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Precios</a>
+                <a href="company.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Empresa</a>
+                <div class="border-t border-gray-200 mt-4 pt-4 flex flex-col space-y-3">
+                    <a href="#contact" class="w-full text-center text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+                    <a href="#login" class="w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -95,7 +103,7 @@
                     <span id="typing-effect" class="gradient-text">automatización inteligente.</span>
                 </h1>
                 <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-subtitle">
-                    Agentes de IA conversacionales + Automatización de procesos en una sola plataforma.
+                    Agentes de IA conversacionales y Automatización de procesos en una sola plataforma.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="#pricing" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/20">
@@ -171,7 +179,7 @@
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center font-bold text-white text-sm">AI</div>
                             <div class="ml-3">
-                                <p class="font-semibold text-gray-900">Nexus Agent</p>
+                                <p class="font-semibold text-gray-900">AI Agent</p>
                                 <p class="text-sm text-green-600">● Online</p>
                             </div>
                         </div>
@@ -202,7 +210,6 @@
             </div>
         </section>
       
-
         <!-- ===== FAQs ===== -->
         <section id="faq" class="py-24">
             <div class="container mx-auto px-6">
@@ -224,7 +231,7 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-6 gap-8">
                 <div class="col-span-2 mb-8 md:mb-0">
-                    <a href="#" class="text-2xl font-bold text-gray-900">Nexus<span class="text-indigo-600">AI</span></a>
+                    <a href="#" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
                     <p class="mt-4 text-sm text-gray-500 max-w-xs">Automatización Inteligente para la nueva era.</p>
                 </div>
                 <div>
@@ -258,13 +265,24 @@
                 </div>
             </div>
             <div class="mt-12 border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center">
-                <p class="text-gray-500 text-sm">&copy; 2024 Nexus AI. Todos los derechos reservados.</p>
+                <p class="text-gray-500 text-sm">&copy; 2024 LockedInWork. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // --- Script para Menú Móvil (NUEVO) ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+
+        if (mobileMenuButton && mobileMenuPanel) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenuPanel.classList.toggle('opacity-0');
+                mobileMenuPanel.classList.toggle('pointer-events-none');
+            });
+        }
+
         // --- Script para efecto de escritura (Typing Effect) ---
         const words = ["automatización inteligente.", "procesos eficientes.", "experiencias conversacionales."];
         let i = 0, j = 0, currentWord = "", isDeleting = false;
@@ -286,13 +304,13 @@
                     return;
                 }
             }
-            setTimeout(type, isDeleting ? 50 : 150);
+            setTimeout(type, isDeleting ? 50 : 50);
         }
         type();
 
         // --- Script para Acordeón de FAQs ---
         const faqs = [
-            { question: "¿En qué se diferencia NexusAI de los chatbots?", answer: "Los chatbots responden preguntas. NexusAI ejecuta acciones reales en tus sistemas: agenda citas, procesa pagos y actualiza tu CRM. Es un agente activo, no un contestador pasivo." },
+            { question: "¿En qué se diferencia LockedInWork de los chatbots?", answer: "Los chatbots responden preguntas. LockedInWork ejecuta acciones reales en tus sistemas: agenda citas, procesa pagos y actualiza tu CRM. Es un agente activo, no un contestador pasivo." },
             { question: "¿Qué tan compleja es la implementación?", answer: "Nos encargamos de la parte difícil. Nuestra plataforma está diseñada para una integración sencilla y ofrecemos guías y soporte para que estés funcionando en el menor tiempo posible." },
             { question: "¿Qué integraciones soporta?", answer: "Soportamos cientos de aplicaciones a través de conexiones nativas y plataformas como Zapier. Desde Salesforce y HubSpot hasta Google Sheets y WhatsApp Business API." },
             { question: "¿Es seguro para manejar datos sensibles de mi empresa?", answer: "Absolutamente. La seguridad es nuestra máxima prioridad. Cumplimos con los más altos estándares de la industria y te damos control total sobre los permisos y el acceso a los datos." }

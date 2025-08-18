@@ -28,24 +28,39 @@
 </head>
 <body class="antialiased">
 
-    <!-- ===== HEADER ===== -->
-    <header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-gray-900">Nexus<span class="text-indigo-600">AI</span></a>
-            <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
-                <a href="products.html" class="px-4 py-2 rounded-lg bg-gray-100 transition-colors">Productos</a>
-                <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
-                <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a>
-                <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
-                <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a>
-            </nav>
-            <div class="hidden md:flex items-center space-x-3">
-                 <a href="#contact" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
-                <a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+    <!-- ===== COPIA Y PEGA ESTE HEADER EN TODAS TUS PÁGINAS ===== -->
+<header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80 relative">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
+        <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
+            <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a>
+            <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
+            <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a>
+            <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
+            <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a>
+        </nav>
+        <div class="hidden md:flex items-center space-x-3">
+            <a href="#contact" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+            <a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
         </div>
-    </header>
+        <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+    </div>
+    
+    <!-- PANEL DEL MENÚ MÓVIL (CORREGIDO) -->
+    <div id="mobile-menu-panel" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+        <div class="flex flex-col p-4 space-y-2">
+            <a href="products.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Productos</a>
+            <a href="solutions.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Soluciones</a>
+            <a href="experiences.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Experiencias</a>
+            <a href="pricing.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Precios</a>
+            <a href="company.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Empresa</a>
+            <div class="border-t border-gray-200 mt-4 pt-4 flex flex-col space-y-3">
+                <a href="#contact" class="w-full text-center text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+                <a href="#login" class="w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+            </div>
+        </div>
+    </div>
+</header>
 
     <main>
         <!-- ===== HERO SECTION - PRODUCTOS ===== -->
@@ -125,6 +140,90 @@
     <footer class="bg-white pt-24 pb-12 border-t border-gray-200">
         <!-- Pega aquí el código de tu footer -->
     </footer>
-
+<!-- ===== COPIA Y PEGA ESTE SCRIPT AL FINAL DE TODAS TUS PÁGINAS ===== -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Script para Menú Móvil ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+    
+        if (mobileMenuButton && mobileMenuPanel) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenuPanel.classList.toggle('opacity-0');
+                mobileMenuPanel.classList.toggle('pointer-events-none');
+            });
+        }
+    
+        // --- Script para efecto de escritura (Typing Effect) ---
+        // (Este script solo funcionará en index.html, pero no dará error en las otras páginas)
+        const typingEffectElement = document.getElementById('typing-effect');
+        if (typingEffectElement) {
+            const words = ["automatización inteligente.", "procesos eficientes.", "experiencias conversacionales."];
+            let i = 0, j = 0, currentWord = "", isDeleting = false;
+            
+            function type() {
+                currentWord = words[i];
+                if (isDeleting) {
+                    typingEffectElement.textContent = currentWord.substring(0, --j);
+                    if (j === 0) {
+                        isDeleting = false;
+                        i = (i + 1) % words.length;
+                    }
+                } else {
+                    typingEffectElement.textContent = currentWord.substring(0, ++j);
+                    if (j === currentWord.length) {
+                        isDeleting = true;
+                        setTimeout(type, 2000);
+                        return;
+                    }
+                }
+                setTimeout(type, isDeleting ? 50 : 50);
+            }
+            type();
+        }
+    
+        // --- Script para Acordeón de FAQs ---
+        // (Este script solo funcionará en index.html, pero no dará error en las otras páginas)
+        const faqContainer = document.getElementById('faq-container');
+        if (faqContainer) {
+            const faqs = [
+                { question: "¿En qué se diferencia LockedInWork de los chatbots?", answer: "Los chatbots responden preguntas. LockedInWork ejecuta acciones reales en tus sistemas: agenda citas, procesa pagos y actualiza tu CRM. Es un agente activo, no un contestador pasivo." },
+                { question: "¿Qué tan compleja es la implementación?", answer: "Nos encargamos de la parte difícil. Nuestra plataforma está diseñada para una integración sencilla y ofrecemos guías y soporte para que estés funcionando en el menor tiempo posible." },
+                { question: "¿Qué integraciones soporta?", answer: "Soportamos cientos de aplicaciones a través de conexiones nativas y plataformas como Zapier. Desde Salesforce y HubSpot hasta Google Sheets y WhatsApp Business API." },
+                { question: "¿Es seguro para manejar datos sensibles de mi empresa?", answer: "Absolutamente. La seguridad es nuestra máxima prioridad. Cumplimos con los más altos estándares de la industria y te damos control total sobre los permisos y el acceso a los datos." }
+            ];
+            
+            faqs.forEach(faq => {
+                const faqItem = document.createElement('div');
+                faqItem.className = 'faq-item bg-white border border-gray-200 rounded-lg transition-shadow duration-300 hover:shadow-md';
+                faqItem.innerHTML = `
+                    <div class="faq-question flex justify-between items-center p-6">
+                        <h3 class="text-lg font-semibold text-gray-900">${faq.question}</h3>
+                        <svg class="icon-plus w-6 h-6 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                    </div>
+                    <div class="faq-answer"><p class="text-subtitle">${faq.answer}</p></div>`;
+                faqContainer.appendChild(faqItem);
+            });
+    
+            faqContainer.addEventListener('click', (e) => {
+                const questionHeader = e.target.closest('.faq-question');
+                if (!questionHeader) return;
+                const faqItem = questionHeader.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const isOpen = faqItem.classList.contains('active');
+                
+                document.querySelectorAll('#faq-container .faq-item.active').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                        item.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+    
+                faqItem.classList.toggle('active');
+                answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+            });
+        }
+    });
+    </script>
 </body>
 </html>
