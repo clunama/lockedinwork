@@ -29,14 +29,18 @@
             background-clip: text;
             text-fill-color: transparent;
         }
-        .faq-question { cursor: pointer; }
+                .faq-question { cursor: pointer; }
+        
+        /* MODIFICADO: Se eliminó el padding y su transición */
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-            padding: 0 1.5rem;
+            transition: max-height 0.4s ease-in-out;
         }
-        .faq-item.active .faq-answer { padding-top: 0.5rem; padding-bottom: 1.5rem; }
+        
+        /* ELIMINADO: La siguiente regla fue borrada por completo */
+        /* .faq-item.active .faq-answer { padding-top: 0.5rem; padding-bottom: 1.5rem; } */
+        
         .faq-item.active .icon-plus { transform: rotate(45deg); }
         .icon-plus { transition: transform 0.3s ease; }
         .logo-scroller {
@@ -307,42 +311,86 @@
         type();
 
         // --- Script para Acordeón de FAQs ---
-        const faqs = [
-            { question: "¿En qué se diferencia LockedInWork de los chatbots?", answer: "Los chatbots responden preguntas. LockedInWork ejecuta acciones reales en tus sistemas: agenda citas, procesa pagos y actualiza tu CRM. Es un agente activo, no un contestador pasivo." },
-            { question: "¿Qué tan compleja es la implementación?", answer: "Nos encargamos de la parte difícil. Nuestra plataforma está diseñada para una integración sencilla y ofrecemos guías y soporte para que estés funcionando en el menor tiempo posible." },
-            { question: "¿Qué integraciones soporta?", answer: "Soportamos cientos de aplicaciones a través de conexiones nativas y plataformas como Zapier. Desde Salesforce y HubSpot hasta Google Sheets y WhatsApp Business API." },
-            { question: "¿Es seguro para manejar datos sensibles de mi empresa?", answer: "Absolutamente. La seguridad es nuestra máxima prioridad. Cumplimos con los más altos estándares de la industria y te damos control total sobre los permisos y el acceso a los datos." }
-        ];
-        const faqContainer = document.getElementById('faq-container');
-        if (faqContainer) {
-            faqs.forEach(faq => {
-                const faqItem = document.createElement('div');
-                faqItem.className = 'faq-item bg-white border border-gray-200 rounded-lg transition-shadow duration-300 hover:shadow-md';
-                faqItem.innerHTML = `
-                    <div class="faq-question flex justify-between items-center p-6">
-                        <h3 class="text-lg font-semibold text-gray-900">${faq.question}</h3>
-                        <svg class="icon-plus w-6 h-6 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                    </div>
-                    <div class="faq-answer"><p class="text-subtitle">${faq.answer}</p></div>`;
-                faqContainer.appendChild(faqItem);
-            });
-            faqContainer.addEventListener('click', (e) => {
-                const questionHeader = e.target.closest('.faq-question');
-                if (!questionHeader) return;
-                const faqItem = questionHeader.parentElement;
-                const answer = faqItem.querySelector('.faq-answer');
-                const isOpen = faqItem.classList.contains('active');
-                document.querySelectorAll('#faq-container .faq-item.active').forEach(item => {
-                    if (item !== faqItem) {
-                        item.classList.remove('active');
-                        item.querySelector('.faq-answer').style.maxHeight = null;
-                    }
-                });
-                faqItem.classList.toggle('active');
-                answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
-            });
+        document.addEventListener('DOMContentLoaded', () => {
+    // --- Script para Menú Móvil (NUEVO) ---
+    // (Este código no lo incluiste, pero asumo que está antes de las FAQs)
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+
+    if (mobileMenuButton && mobileMenuPanel) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuPanel.classList.toggle('opacity-0');
+            mobileMenuPanel.classList.toggle('pointer-events-none');
+        });
+    }
+
+    // --- Script para efecto de escritura (Typing Effect) ---
+    // (Este código no lo incluiste, pero asumo que está antes de las FAQs)
+    const words = ["automatización inteligente.", "procesos eficientes.", "experiencias conversacionales."];
+    let i = 0, j = 0, currentWord = "", isDeleting = false;
+    const typingEffectElement = document.getElementById('typing-effect');
+    function type() {
+        if (!typingEffectElement) return;
+        currentWord = words[i];
+        if (isDeleting) {
+            typingEffectElement.textContent = currentWord.substring(0, --j);
+            if (j === 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+            }
+        } else {
+            typingEffectElement.textContent = currentWord.substring(0, ++j);
+            if (j === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 2000); // Pause at end of word
+                return;
+            }
         }
-    });
+        setTimeout(type, isDeleting ? 50 : 50);
+    }
+    type();
+    
+    // --- Script para Acordeón de FAQs (AQUÍ ESTÁ LA CORRECCIÓN) ---
+    const faqs = [
+        { question: "¿En qué se diferencia LockedInWork de los chatbots?", answer: "Los chatbots responden preguntas. LockedInWork ejecuta acciones reales en tus sistemas: agenda citas, procesa pagos y actualiza tu CRM. Es un agente activo, no un contestador pasivo." },
+        { question: "¿Qué tan compleja es la implementación?", answer: "Nos encargamos de la parte difícil. Nuestra plataforma está diseñada para una integración sencilla y ofrecemos guías y soporte para que estés funcionando en el menor tiempo posible." },
+        { question: "¿Qué integraciones soporta?", answer: "Soportamos cientos de aplicaciones a través de conexiones nativas y plataformas como Zapier. Desde Salesforce y HubSpot hasta Google Sheets y WhatsApp Business API." },
+        { question: "¿Es seguro para manejar datos sensibles de mi empresa?", answer: "Absolutamente. La seguridad es nuestra máxima prioridad. Cumplimos con los más altos estándares de la industria y te damos control total sobre los permisos y el acceso a los datos." }
+    ];
+    const faqContainer = document.getElementById('faq-container');
+    if (faqContainer) {
+        faqs.forEach(faq => {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'faq-item bg-white border border-gray-200 rounded-lg transition-shadow duration-300 hover:shadow-md';
+            
+            // ===== LÍNEA MODIFICADA =====
+            // Se añaden clases de padding (px-6 pt-2 pb-6) directamente al párrafo <p>
+            faqItem.innerHTML = `
+                <div class="faq-question flex justify-between items-center p-6">
+                    <h3 class="text-lg font-semibold text-gray-900">${faq.question}</h3>
+                    <svg class="icon-plus w-6 h-6 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                </div>
+                <div class="faq-answer"><p class="text-subtitle px-6 pt-2 pb-6">${faq.answer}</p></div>`;
+            
+            faqContainer.appendChild(faqItem);
+        });
+        faqContainer.addEventListener('click', (e) => {
+            const questionHeader = e.target.closest('.faq-question');
+            if (!questionHeader) return;
+            const faqItem = questionHeader.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const isOpen = faqItem.classList.contains('active');
+            document.querySelectorAll('#faq-container .faq-item.active').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                }
+            });
+            faqItem.classList.toggle('active');
+            answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+        });
+    }
+});
     </script>
 </body>
 </html>
