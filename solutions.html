@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluciones por Equipo - Nexus AI</title>
-    <meta name="description" content="Descubre cómo Nexus AI potencia a equipos de soporte, ventas, marketing y recursos humanos con soluciones de automatización inteligente a medida.">
+    <title>Productos - Plataforma Nexus AI</title>
+    <meta name="description" content="Explora las características de la plataforma Nexus AI: Agentes Conversacionales avanzados, un potente constructor de flujos de automatización y un hub de integraciones completo.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,138 +21,178 @@
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             background-clip: text; text-fill-color: transparent;
         }
+        .feature-card-icon {
+            background: linear-gradient(135deg, #6366F1, #8B5CF6);
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- ===== HEADER ===== -->
-    <!-- ===== COPIA Y PEGA ESTE HEADER EN TODAS TUS PÁGINAS ===== -->
-<header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80 relative">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
-        <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
-            <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a>
-            <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
-            <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a>
-            <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
-            <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a>
-        </nav>
-        <div class="hidden md:flex items-center space-x-3">
-            <a href="#contact" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
-            <a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+    <!-- ===== HEADER ORIGINAL (SIN CAMBIOS) ===== -->
+    <header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80 relative">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
+            <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
+                <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a>
+                <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
+                <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a>
+                <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
+                <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="#contact" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+                <a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
         </div>
-        <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
-    </div>
-    
-    <!-- PANEL DEL MENÚ MÓVIL (CORREGIDO) -->
-    <div id="mobile-menu-panel" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-40">
-        <div class="flex flex-col p-4 space-y-2">
-            <a href="products.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Productos</a>
-            <a href="solutions.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Soluciones</a>
-            <a href="experiences.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Experiencias</a>
-            <a href="pricing.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Precios</a>
-            <a href="company.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Empresa</a>
-            <div class="border-t border-gray-200 mt-4 pt-4 flex flex-col space-y-3">
-                <a href="#contact" class="w-full text-center text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
-                <a href="#login" class="w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+        
+        <!-- PANEL DEL MENÚ MÓVIL ORIGINAL (SIN CAMBIOS) -->
+        <div id="mobile-menu-panel" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+            <div class="flex flex-col p-4 space-y-2">
+                <a href="products.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Productos</a>
+                <a href="solutions.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Soluciones</a>
+                <a href="experiences.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Experiencias</a>
+                <a href="pricing.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Precios</a>
+                <a href="company.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Empresa</a>
+                <div class="border-t border-gray-200 mt-4 pt-4 flex flex-col space-y-3">
+                    <a href="#contact" class="w-full text-center text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+                    <a href="#login" class="w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <main>
-        <!-- ===== HERO SECTION - SOLUCIONES ===== -->
+        <!-- ===== HERO SECTION (SIN CAMBIOS) ===== -->
         <section class="py-20 md:py-32">
             <div class="container mx-auto px-6 text-center">
-                <p class="font-bold text-indigo-600 uppercase tracking-widest">SOLUCIONES A MEDIDA</p>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mt-3">
-                    Potencia a cada equipo<br>con <span class="gradient-text">IA y automatización.</span>
+                <p class="font-bold text-indigo-600 uppercase tracking-widest">NUESTRA PLATAFORMA</p>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mt-3 h-40 md:h-48 lg:h-56 flex items-center justify-center overflow-hidden">
+                    <span id="headline-rotator" class="transform transition-all duration-500 ease-in-out opacity-0"></span>
                 </h1>
                 <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-subtitle">
-                    NexusAI no es una solución única. Adaptamos nuestra plataforma para resolver los desafíos específicos de cada departamento, desde la atención al cliente hasta las ventas y operaciones.
+                    Descubre los componentes clave que hacen de NexusAI la solución definitiva para conversar, automatizar y crecer.
                 </p>
             </div>
         </section>
 
-        <!-- ===== SOLUCIONES POR EQUIPO ===== -->
-        <section id="by-team" class="py-24 bg-white">
+        <!-- ===== FEATURE 1: AGENTES CONVERSACIONALES (SIN CAMBIOS) ===== -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="pr-0 md:pr-8">
+                    <p class="font-bold text-indigo-600 uppercase tracking-widest">AGENTS</p>
+                    <h2 class="text-4xl font-bold text-gray-900 mt-3">Agentes de IA que razonan y actúan</h2>
+                    <p class="mt-4 text-lg text-subtitle">Ve más allá de los chatbots. Nuestros agentes entienden la intención, mantienen el contexto y ejecutan tareas complejas en tus sistemas. Son una extensión proactiva de tu equipo.</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x500/E0E7FF/3730A3?text=UI+de+Chat" class="rounded-2xl shadow-xl" alt="Interfaz de un agente conversacional de IA">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FEATURE 2: AUTOMATION FLOWS (SIN CAMBIOS) ===== -->
+        <section class="py-24">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                 <div class="order-2 md:order-1">
+                    <img src="https://placehold.co/600x500/D1FAE5/064E3B?text=Constructor+Visual" class="rounded-2xl shadow-xl" alt="Constructor visual de flujos de automatización">
+                </div>
+                <div class="pl-0 md:pl-8 order-1 md:order-2">
+                    <p class="font-bold text-indigo-600 uppercase tracking-widest">NEXUSFLOW</p>
+                    <h2 class="text-4xl font-bold text-gray-900 mt-3">Automatización sin límites con una interfaz visual</h2>
+                    <p class="mt-4 text-lg text-subtitle">Diseña, implementa y escala flujos de trabajo complejos sin escribir una línea de código. Conecta tus aplicaciones, añade lógica condicional y deja que NexusAI se encargue del trabajo pesado.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== FEATURE 3: HUB DE INTEGRACIONES (SIN CAMBIOS) ===== -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="pr-0 md:pr-8">
+                    <p class="font-bold text-indigo-600 uppercase tracking-widest">CONNECT</p>
+                    <h2 class="text-4xl font-bold text-gray-900 mt-3">Conecta todo tu ecosistema de software</h2>
+                    <p class="mt-4 text-lg text-subtitle">NexusAI funciona como el sistema nervioso central de tu empresa. Con cientos de integraciones nativas y acceso a nuestra API, puedes unificar tus herramientas y datos en una sola plataforma.</p>
+                </div>
+                <div>
+                     <img src="https://placehold.co/600x500/FEF3C7/92400E?text=Logos+de+Apps" class="rounded-2xl shadow-xl" alt="Grid de logos de aplicaciones integradas con NexusAI">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN NUEVA: SOLUCIONES POR DEPARTAMENTO (TABS) ===== -->
+        <section id="solutions-by-department" class="py-24">
             <div class="container mx-auto px-6">
+                <!-- Título de la sección -->
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Soluciones para cada departamento</h2>
                     <p class="mt-4 max-w-2xl mx-auto text-lg text-subtitle">Encuentra cómo tu equipo puede trabajar de forma más inteligente, no más dura.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    
-                    <!-- Solución: Soporte -->
-                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
-                        <div class="flex items-start">
-                            <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" /></svg></div>
-                            <div class="ml-5">
-                                <h3 class="text-xl font-bold">Para Equipos de Soporte</h3>
-                                <p class="mt-2 text-subtitle text-sm">Resuelve consultas al instante, 24/7. Automatiza la clasificación de tickets, responde preguntas frecuentes y escala casos complejos a agentes humanos con todo el contexto necesario, mejorando el CSAT y la eficiencia.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Solución: Ventas -->
-                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
-                        <div class="flex items-start">
-                             <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg></div>
-                            <div class="ml-5">
-                                <h3 class="text-xl font-bold">Para Equipos de Ventas</h3>
-                                <p class="mt-2 text-subtitle text-sm">Nunca pierdas un lead. Califica prospectos en tiempo real, agenda demos automáticamente en el calendario de tus reps y nutre a los clientes potenciales con seguimientos personalizados, liberando a tu equipo para que se enfoque en cerrar tratos.</p>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Botones de las Pestañas -->
+                <div id="tabs-buttons" class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+                    <button data-tab="support" class="tab-button bg-indigo-600 text-white px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Equipos de Soporte</button>
+                    <button data-tab="sales" class="tab-button bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Equipos de Ventas</button>
+                    <button data-tab="marketing" class="tab-button bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Equipos de Marketing</button>
+                    <button data-tab="hr" class="tab-button bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg transition-colors duration-300">RRHH y Operaciones</button>
+                </div>
 
-                    <!-- Solución: Marketing -->
-                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
-                        <div class="flex items-start">
-                             <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" /></svg></div>
-                            <div class="ml-5">
-                                <h3 class="text-xl font-bold">Para Equipos de Marketing</h3>
-                                <p class="mt-2 text-subtitle text-sm">Crea experiencias interactivas que convierten. Captura leads desde tus campañas, personaliza el contenido en tu web de forma dinámica y segmenta audiencias basándote en conversaciones para un marketing más efectivo.</p>
+                <!-- Contenido de las Pestañas -->
+                <div id="tabs-content" class="relative">
+                    <!-- Panel Soporte -->
+                    <div data-tab-content="support" class="tab-panel transition-opacity duration-500 ease-in-out opacity-100">
+                        <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                            <div class="pr-0 md:pr-8">
+                                <h3 class="text-3xl font-bold text-gray-900">Resuelve consultas al instante, 24/7</h3>
+                                <p class="mt-4 text-lg text-subtitle">Automatiza la clasificación de tickets, responde preguntas frecuentes y escala casos complejos a agentes humanos con todo el contexto necesario, mejorando el CSAT y la eficiencia.</p>
                             </div>
+                            <img src="https://placehold.co/600x450/E0E7FF/3730A3?text=Dashboard+de+Soporte" class="rounded-xl shadow-md w-full h-full object-cover" alt="Dashboard de soporte al cliente automatizado">
                         </div>
                     </div>
-
-                    <!-- Solución: RRHH y Operaciones -->
-                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
-                        <div class="flex items-start">
-                             <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-1.78-4.125" /></svg></div>
-                            <div class="ml-5">
-                                <h3 class="text-xl font-bold">Para RRHH y Operaciones</h3>
-                                <p class="mt-2 text-subtitle text-sm">Automatiza tareas internas repetitivas. Gestiona el onboarding de nuevos empleados, responde preguntas sobre políticas internas, procesa solicitudes de vacaciones y optimiza los flujos de trabajo de aprobación.</p>
+                    <!-- Panel Ventas -->
+                    <div data-tab-content="sales" class="tab-panel transition-opacity duration-500 ease-in-out opacity-0 absolute top-0 left-0 w-full hidden">
+                         <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                            <div class="pr-0 md:pr-8">
+                                <h3 class="text-3xl font-bold text-gray-900">Nunca pierdas un lead</h3>
+                                <p class="mt-4 text-lg text-subtitle">Califica prospectos en tiempo real, agenda demos automáticamente en el calendario de tus reps y nutre a los clientes potenciales con seguimientos personalizados, liberando a tu equipo para que se enfoque en cerrar tratos.</p>
                             </div>
+                            <img src="https://placehold.co/600x450/D1FAE5/064E3B?text=CRM+Automatizado" class="rounded-xl shadow-md w-full h-full object-cover" alt="CRM con leads calificados automáticamente">
+                        </div>
+                    </div>
+                    <!-- Panel Marketing -->
+                    <div data-tab-content="marketing" class="tab-panel transition-opacity duration-500 ease-in-out opacity-0 absolute top-0 left-0 w-full hidden">
+                         <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                            <div class="pr-0 md:pr-8">
+                                <h3 class="text-3xl font-bold text-gray-900">Crea experiencias interactivas que convierten</h3>
+                                <p class="mt-4 text-lg text-subtitle">Captura leads desde tus campañas, personaliza el contenido en tu web de forma dinámica y segmenta audiencias basándote en conversaciones para un marketing más efectivo.</p>
+                            </div>
+                            <img src="https://placehold.co/600x450/FEF3C7/92400E?text=Flujo+de+Marketing" class="rounded-xl shadow-md w-full h-full object-cover" alt="Flujo de una campaña de marketing interactiva">
+                        </div>
+                    </div>
+                     <!-- Panel RRHH -->
+                    <div data-tab-content="hr" class="tab-panel transition-opacity duration-500 ease-in-out opacity-0 absolute top-0 left-0 w-full hidden">
+                         <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                            <div class="pr-0 md:pr-8">
+                                <h3 class="text-3xl font-bold text-gray-900">Automatiza tareas internas repetitivas</h3>
+                                <p class="mt-4 text-lg text-subtitle">Gestiona el onboarding de nuevos empleados, responde preguntas sobre políticas internas, procesa solicitudes de vacaciones y optimiza los flujos de trabajo de aprobación.</p>
+                            </div>
+                            <img src="https://placehold.co/600x450/FEE2E2/991B1B?text=Portal+de+RRHH" class="rounded-xl shadow-md w-full h-full object-cover" alt="Portal de onboarding automatizado para empleados">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- ===== FIN DE LA SECCIÓN NUEVA ===== -->
 
-        <!-- ===== CTA Section ===== -->
-        <section class="py-24">
-            <div class="container mx-auto px-6 text-center bg-indigo-600 rounded-2xl py-16">
-                 <h2 class="text-4xl font-bold text-white">¿No ves tu caso de uso?</h2>
-                 <p class="mt-4 max-w-2xl mx-auto text-lg text-indigo-200">La flexibilidad de NexusAI nos permite crear soluciones a medida para cualquier desafío. Hablemos sobre tus necesidades específicas.</p>
-                 <div class="mt-8">
-                    <a href="#contact" class="bg-white text-indigo-600 font-semibold px-8 py-3 rounded-lg hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105">
-                        Contactar con un especialista
-                    </a>
-                </div>
-            </div>
-        </section>
     </main>
     
-    <!-- ===== FOOTER ===== -->
+    <!-- ===== FOOTER (SIN CAMBIOS) ===== -->
     <footer class="bg-white pt-24 pb-12 border-t border-gray-200">
         <!-- Pega aquí el código de tu footer -->
     </footer>
-<!-- ===== COPIA Y PEGA ESTE SCRIPT AL FINAL DE TODAS TUS PÁGINAS ===== -->
+
+<!-- ===== SCRIPT CON LÓGICA DEL ROTADOR Y PESTAÑAS ===== -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // --- Script para Menú Móvil ---
+        // --- Script para Menú Móvil (CÓDIGO ORIGINAL) ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenuPanel = document.getElementById('mobile-menu-panel');
     
@@ -163,76 +203,83 @@
             });
         }
     
-        // --- Script para efecto de escritura (Typing Effect) ---
-        // (Este script solo funcionará en index.html, pero no dará error en las otras páginas)
-        const typingEffectElement = document.getElementById('typing-effect');
-        if (typingEffectElement) {
-            const words = ["automatización inteligente.", "procesos eficientes.", "experiencias conversacionales."];
-            let i = 0, j = 0, currentWord = "", isDeleting = false;
-            
-            function type() {
-                currentWord = words[i];
-                if (isDeleting) {
-                    typingEffectElement.textContent = currentWord.substring(0, --j);
-                    if (j === 0) {
-                        isDeleting = false;
-                        i = (i + 1) % words.length;
-                    }
-                } else {
-                    typingEffectElement.textContent = currentWord.substring(0, ++j);
-                    if (j === currentWord.length) {
-                        isDeleting = true;
-                        setTimeout(type, 2000);
-                        return;
-                    }
-                }
-                setTimeout(type, isDeleting ? 50 : 50);
-            }
-            type();
-        }
-    
-        // --- Script para Acordeón de FAQs ---
-        // (Este script solo funcionará en index.html, pero no dará error en las otras páginas)
-        const faqContainer = document.getElementById('faq-container');
-        if (faqContainer) {
-            const faqs = [
-                { question: "¿En qué se diferencia LockedInWork de los chatbots?", answer: "Los chatbots responden preguntas. LockedInWork ejecuta acciones reales en tus sistemas: agenda citas, procesa pagos y actualiza tu CRM. Es un agente activo, no un contestador pasivo." },
-                { question: "¿Qué tan compleja es la implementación?", answer: "Nos encargamos de la parte difícil. Nuestra plataforma está diseñada para una integración sencilla y ofrecemos guías y soporte para que estés funcionando en el menor tiempo posible." },
-                { question: "¿Qué integraciones soporta?", answer: "Soportamos cientos de aplicaciones a través de conexiones nativas y plataformas como Zapier. Desde Salesforce y HubSpot hasta Google Sheets y WhatsApp Business API." },
-                { question: "¿Es seguro para manejar datos sensibles de mi empresa?", answer: "Absolutamente. La seguridad es nuestra máxima prioridad. Cumplimos con los más altos estándares de la industria y te damos control total sobre los permisos y el acceso a los datos." }
+        // --- Lógica del Rotador de Titulares (CÓDIGO ORIGINAL MEJORADO) ---
+        const headlineRotator = document.getElementById('headline-rotator');
+        if (headlineRotator) {
+            const headlines = [
+                'La suite completa para la<br><span class="gradient-text">automatización inteligente.</span>',
+                'Potencia a cada equipo<br>con <span class="gradient-text">IA y automatización.</span>'
             ];
+            let currentIndex = 0;
+
+            function changeHeadline() {
+                headlineRotator.classList.add('opacity-0', '-translate-y-5');
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % headlines.length;
+                    headlineRotator.innerHTML = headlines[currentIndex];
+                    headlineRotator.classList.remove('-translate-y-5'); 
+                    headlineRotator.classList.add('translate-y-5');
+                    setTimeout(() => {
+                         headlineRotator.classList.remove('opacity-0', 'translate-y-5');
+                    }, 20);
+                }, 500);
+            }
+
+            headlineRotator.innerHTML = headlines[currentIndex];
+            headlineRotator.classList.add('translate-y-5');
+             setTimeout(() => {
+                headlineRotator.classList.remove('opacity-0', 'translate-y-5');
+            }, 100); 
             
-            faqs.forEach(faq => {
-                const faqItem = document.createElement('div');
-                faqItem.className = 'faq-item bg-white border border-gray-200 rounded-lg transition-shadow duration-300 hover:shadow-md';
-                faqItem.innerHTML = `
-                    <div class="faq-question flex justify-between items-center p-6">
-                        <h3 class="text-lg font-semibold text-gray-900">${faq.question}</h3>
-                        <svg class="icon-plus w-6 h-6 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                    </div>
-                    <div class="faq-answer"><p class="text-subtitle">${faq.answer}</p></div>`;
-                faqContainer.appendChild(faqItem);
-            });
-    
-            faqContainer.addEventListener('click', (e) => {
-                const questionHeader = e.target.closest('.faq-question');
-                if (!questionHeader) return;
-                const faqItem = questionHeader.parentElement;
-                const answer = faqItem.querySelector('.faq-answer');
-                const isOpen = faqItem.classList.contains('active');
-                
-                document.querySelectorAll('#faq-container .faq-item.active').forEach(item => {
-                    if (item !== faqItem) {
-                        item.classList.remove('active');
-                        item.querySelector('.faq-answer').style.maxHeight = null;
+            setInterval(changeHeadline, 4000); 
+        }
+
+        // --- INICIO DEL NUEVO SCRIPT PARA PESTAÑAS DE SOLUCIONES ---
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+
+                // Actualizar botones
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+                });
+                button.classList.add('bg-indigo-600', 'text-white');
+                button.classList.remove('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+
+                // Actualizar paneles con animación de fundido
+                let currentlyVisiblePanel = null;
+                tabPanels.forEach(panel => {
+                    if (panel.classList.contains('opacity-100') && !panel.classList.contains('hidden')) {
+                        currentlyVisiblePanel = panel;
                     }
                 });
-    
-                faqItem.classList.toggle('active');
-                answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+
+                const targetPanel = document.querySelector(`.tab-panel[data-tab-content="${targetTab}"]`);
+
+                if (currentlyVisiblePanel && currentlyVisiblePanel !== targetPanel) {
+                    currentlyVisiblePanel.classList.remove('opacity-100');
+                    currentlyVisiblePanel.classList.add('opacity-0');
+                    setTimeout(() => {
+                        currentlyVisiblePanel.classList.add('hidden');
+                        currentlyVisiblePanel.classList.remove('absolute', 'top-0', 'left-0', 'w-full');
+                    
+                        targetPanel.classList.remove('hidden', 'absolute', 'top-0', 'left-0', 'w-full');
+                        setTimeout(() => { // Pequeño delay para asegurar que la transición de opacidad se aplique
+                           targetPanel.classList.remove('opacity-0');
+                           targetPanel.classList.add('opacity-100');
+                        }, 20);
+                    }, 500); // Duración de la animación de salida
+                }
             });
-        }
+        });
+        // --- FIN DEL NUEVO SCRIPT PARA PESTAÑAS ---
+
+        // El código inactivo para "typing-effect" y "faq-container" se ha omitido para mayor limpieza.
     });
-    </script>
+</script>
 </body>
 </html>
