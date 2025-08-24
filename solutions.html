@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Plataforma Nexus AI</title>
-    <meta name="description" content="Explora las características de la plataforma Nexus AI: Agentes Conversacionales avanzados, un potente constructor de flujos de automatización y un hub de integraciones completo.">
+    <title>LockedInWork - Soluciones AI</title>
+    <meta name="description" content="Explora las distintas formas en que LockedInWork te puede ayudar con IA: Agentes Conversacionales avanzados, automatización de procesos y análisis de datos.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="LIW" />
+<link rel="manifest" href="/site.webmanifest" />
 
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #F9FAFB; color: #11182A; }
@@ -28,35 +33,39 @@
 </head>
 <body class="antialiased">
 
-    <!-- ===== HEADER ORIGINAL (SIN CAMBIOS) ===== -->
+    <!-- ===== HEADER ===== -->
     <header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80 relative">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
-            <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
-                <!-- <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a> -->
-                <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
-                <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a>
-                <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
-                <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a>
-            </nav>
-            <div class="hidden md:flex items-center space-x-3">
-                <a href="#contact" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
-                <a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+            <!-- INICIO DE LA MODIFICACIÓN: Añadir este div contenedor -->
+            <div class="flex items-center gap-x-8">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
+                <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
+                    <!-- <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a> -->
+                    <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
+                    <!-- <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a> -->
+                    <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
+                    <!-- <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a> -->
+                </nav>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+            <!-- FIN DE LA MODIFICACIÓN -->
+            
+            <div class="hidden md:flex items-center space-x-3">
+                <!-- ... tus botones de la derecha ... -->
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">...</button>
         </div>
         
-        <!-- PANEL DEL MENÚ MÓVIL ORIGINAL (SIN CAMBIOS) -->
+        <!-- PANEL DEL MENÚ MÓVIL -->
         <div id="mobile-menu-panel" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-40">
             <div class="flex flex-col p-4 space-y-2">
                 <!-- <a href="products.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Productos</a> -->
                 <a href="solutions.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Soluciones</a>
-                <a href="experiences.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Experiencias</a>
+                <!--<a href="experiences.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Experiencias</a> -->
                 <a href="pricing.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Precios</a>
-                <a href="company.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Empresa</a>
+                <!--<a href="company.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Empresa</a> -->
                 <div class="border-t border-gray-200 mt-4 pt-4 flex flex-col space-y-3">
-                    <a href="#contact" class="w-full text-center text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
-                    <a href="#login" class="w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+                    <a href="https://calendly.com/carlos-lockedinwork/30min"  target="_blank" rel="noopener noreferrer" class="w-full text-center text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+                    <!--<a href="#login" class="w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>-->
                 </div>
             </div>
         </div>
@@ -66,7 +75,7 @@
         <!-- ===== HERO SECTION (SIN CAMBIOS) ===== -->
         <section class="py-20 md:py-32">
             <div class="container mx-auto px-6 text-center">
-                <p class="font-bold text-indigo-600 uppercase tracking-widest">NUESTRA PLATAFORMA</p>
+                <!--<p class="font-bold text-indigo-600 uppercase tracking-widest">NUESTRA PLATAFORMA</p> -->
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mt-3 h-40 md:h-48 lg:h-56 flex items-center justify-center overflow-hidden">
                     <span id="headline-rotator" class="transform transition-all duration-500 ease-in-out opacity-0"></span>
                 </h1>
@@ -76,44 +85,66 @@
             </div>
         </section>
 
-        <!-- ===== FEATURE 1: AGENTES CONVERSACIONALES (SIN CAMBIOS) ===== -->
-        <section class="py-24 bg-white">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div class="pr-0 md:pr-8">
-                    <p class="font-bold text-indigo-600 uppercase tracking-widest">AGENTS</p>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-3">Agentes de IA que razonan y actúan</h2>
-                    <p class="mt-4 text-lg text-subtitle">Ve más allá de los chatbots. Nuestros agentes entienden la intención, mantienen el contexto y ejecutan tareas complejas en tus sistemas. Son una extensión proactiva de tu equipo.</p>
-                </div>
-                <div>
-                    <img src="https://placehold.co/600x500/E0E7FF/3730A3?text=UI+de+Chat" class="rounded-2xl shadow-xl" alt="Interfaz de un agente conversacional de IA">
-                </div>
-            </div>
-        </section>
+<!-- ===== FEATURE 1: AGENTES CONVERSACIONALES (CORREGIDO) ===== -->
+<section class="py-24 bg-white">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        
+        <!-- El bloque de texto ahora también contiene el botón -->
+        <div class="pr-0 md:pr-8">
+            <p class="font-bold text-indigo-600 uppercase tracking-widest">Fran</p>
+            <h2 class="text-4xl font-bold text-gray-900 mt-3">El Agente IA que razona y actúa.</h2>
+            <p class="mt-4 text-lg text-subtitle">Ve más allá de los chatbots. Fran entiende la intención, mantiene el contexto y ejecuta tareas complejas en tus sistemas para mejorar la experiencia de tus clientes o de tu equipo.</p>
+            
+            <!-- EL BOTÓN HA SIDO MOVIDO AQUÍ DENTRO -->
+            <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-indigo-600 text-white font-semibold py-2.5 px-5 rounded-lg hover:bg-indigo-700 transition-all duration-300">
+                Conocer más
+            </a>
+        </div>
 
-        <!-- ===== FEATURE 2: AUTOMATION FLOWS (SIN CAMBIOS) ===== -->
+        <!-- El bloque de la imagen no cambia -->
+        <div class="rounded-2xl shadow-xl overflow-hidden h-96">
+            <img src="images/fran_frontal.jpg" 
+                class="w-full h-full object-contain object-top" 
+                alt="Fran, el agente de IA de LockedInWork">
+        </div>
+
+    </div>
+</section>
+
+        <!-- ===== FEATURE 2: LIWINBOX TODO EN UN SOLO LUGAR ===== -->
         <section class="py-24">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                 <div class="order-2 md:order-1">
-                    <img src="https://placehold.co/600x500/D1FAE5/064E3B?text=Constructor+Visual" class="rounded-2xl shadow-xl" alt="Constructor visual de flujos de automatización">
+                <div class="pl-0 md:pl-8 order-0 md:order-2">
+                    <p class="font-bold text-indigo-600 uppercase tracking-widest">LIWINBOX</p>
+                    <h2 class="text-4xl font-bold text-gray-900 mt-3">Todo en un solo lugar</h2>
+                    <p class="mt-4 text-lg text-subtitle">Atiende todos tus canales de contacto con usuarios desde una sola bandeja, permitiendote tener control de lo que responde nuestra IA y de lo que agrega tu equipo.</p>
+                    <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-indigo-600 text-white font-semibold py-2.5 px-5 rounded-lg hover:bg-indigo-700 transition-all duration-300">
+                        Ver más info
+                    </a>
                 </div>
-                <div class="pl-0 md:pl-8 order-1 md:order-2">
-                    <p class="font-bold text-indigo-600 uppercase tracking-widest">NEXUSFLOW</p>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-3">Automatización sin límites con una interfaz visual</h2>
-                    <p class="mt-4 text-lg text-subtitle">Diseña, implementa y escala flujos de trabajo complejos sin escribir una línea de código. Conecta tus aplicaciones, añade lógica condicional y deja que NexusAI se encargue del trabajo pesado.</p>
+                <div class="rounded-2xl shadow-xl overflow-hidden h-96"> <!-- Marco con altura fija y recorte -->
+                    <img src="images/liwinbox.jpg" 
+                         class="w-full h-full object-cover object-left" 
+                         alt="LIWBOX la bandeja de entrada unificada de LockedInWork">
                 </div>
             </div>
         </section>
         
-        <!-- ===== FEATURE 3: HUB DE INTEGRACIONES (SIN CAMBIOS) ===== -->
+        <!-- ===== FEATURE 3: LA IMPORATANCIA DE LOS DATOS ===== -->
         <section class="py-24 bg-white">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div class="pr-0 md:pr-8">
-                    <p class="font-bold text-indigo-600 uppercase tracking-widest">CONNECT</p>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-3">Conecta todo tu ecosistema de software</h2>
-                    <p class="mt-4 text-lg text-subtitle">NexusAI funciona como el sistema nervioso central de tu empresa. Con cientos de integraciones nativas y acceso a nuestra API, puedes unificar tus herramientas y datos en una sola plataforma.</p>
+                    <p class="font-bold text-indigo-600 uppercase tracking-widest">DATA DRIVEN</p>
+                    <h2 class="text-4xl font-bold text-gray-900 mt-3">Cada ejecución de IA es un dato, no lo pierdas</h2>
+                    <p class="mt-4 text-lg text-subtitle">LockedInWork quiere ser tu consultor de datos constante, obten insighs de cada conversación, y reportes de cada proceso, simplemente en segundos.</p>
+                    <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-indigo-600 text-white font-semibold py-2.5 px-5 rounded-lg hover:bg-indigo-700 transition-all duration-300">
+                        Solicita una Demo
+                    </a>
                 </div>
-                <div>
-                     <img src="https://placehold.co/600x500/FEF3C7/92400E?text=Logos+de+Apps" class="rounded-2xl shadow-xl" alt="Grid de logos de aplicaciones integradas con NexusAI">
+                <div class="rounded-2xl shadow-xl overflow-hidden h-96bg-white p-8"> <!-- Marco con altura fija y recorte -->
+                    <img src="images/graficos_liw.jpg" 
+                        class="w-full h-full object-cover object-top"
+                        alt="La data es el centro del exito de tu negocio">
                 </div>
             </div>
         </section>
@@ -129,52 +160,56 @@
 
                 <!-- Botones de las Pestañas -->
                 <div id="tabs-buttons" class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
-                    <button data-tab="support" class="tab-button bg-indigo-600 text-white px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Equipos de Soporte</button>
-                    <button data-tab="sales" class="tab-button bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Equipos de Ventas</button>
-                    <button data-tab="marketing" class="tab-button bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Equipos de Marketing</button>
-                    <button data-tab="hr" class="tab-button bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg transition-colors duration-300">RRHH y Operaciones</button>
+                    <button data-tab="support" class="tab-button bg-indigo-600 text-white px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Soporte</button>
+                    <button data-tab="sales" class="tab-button bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Ventas</button>
+                    <button data-tab="marketing" class="tab-button bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Recursos Humanos</button>
+                    <button data-tab="hr" class="tab-button bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 font-semibold rounded-lg transition-colors duration-300">Operaciones</button>
                 </div>
 
                 <!-- Contenido de las Pestañas -->
                 <div id="tabs-content" class="relative">
                     <!-- Panel Soporte -->
                     <div data-tab-content="support" class="tab-panel transition-opacity duration-500 ease-in-out opacity-100">
-                        <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                        <!-- Se han eliminado "grid" y "md:grid-cols-2" de la siguiente línea -->
+                        <div class="gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
                             <div class="pr-0 md:pr-8">
                                 <h3 class="text-3xl font-bold text-gray-900">Resuelve consultas al instante, 24/7</h3>
-                                <p class="mt-4 text-lg text-subtitle">Automatiza la clasificación de tickets, responde preguntas frecuentes y escala casos complejos a agentes humanos con todo el contexto necesario, mejorando el CSAT y la eficiencia.</p>
+                                <p class="mt-4 text-lg text-subtitle">Automatiza la clasificación de tickets, responde preguntas frecuentes y escala solo los casos complejos a agentes humanos con todo el contexto necesario.</p>
                             </div>
-                            <img src="https://placehold.co/600x450/E0E7FF/3730A3?text=Dashboard+de+Soporte" class="rounded-xl shadow-md w-full h-full object-cover" alt="Dashboard de soporte al cliente automatizado">
-                        </div>
+                            <!-- <img src="https://placehold.co/600x450/E0E7FF/3730A3?text=Dashboard+de+Soporte" class="rounded-xl shadow-md w-full h-full object-cover" alt="Dashboard de soporte al cliente automatizado"> -->
+                        </div> 
                     </div>
                     <!-- Panel Ventas -->
                     <div data-tab-content="sales" class="tab-panel transition-opacity duration-500 ease-in-out opacity-0 absolute top-0 left-0 w-full hidden">
-                         <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                        <!-- Se han eliminado "grid" y "md:grid-cols-2" de la siguiente línea -->
+                        <div class="gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
                             <div class="pr-0 md:pr-8">
                                 <h3 class="text-3xl font-bold text-gray-900">Nunca pierdas un lead</h3>
-                                <p class="mt-4 text-lg text-subtitle">Califica prospectos en tiempo real, agenda demos automáticamente en el calendario de tus reps y nutre a los clientes potenciales con seguimientos personalizados, liberando a tu equipo para que se enfoque en cerrar tratos.</p>
+                                <p class="mt-4 text-lg text-subtitle">Multiplica la efectividad de tu inversión publicitaria al estar siempre disponible para tus prospectos y clasifícalos para que tu equipo solo meta los goles.</p>
                             </div>
-                            <img src="https://placehold.co/600x450/D1FAE5/064E3B?text=CRM+Automatizado" class="rounded-xl shadow-md w-full h-full object-cover" alt="CRM con leads calificados automáticamente">
+                            <!-- <img src="https://placehold.co/600x450/D1FAE5/064E3B?text=CRM+Automatizado" class="rounded-xl shadow-md w-full h-full object-cover" alt="CRM con leads calificados automáticamente"> -->
                         </div>
                     </div>
                     <!-- Panel Marketing -->
                     <div data-tab-content="marketing" class="tab-panel transition-opacity duration-500 ease-in-out opacity-0 absolute top-0 left-0 w-full hidden">
-                         <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                        <!-- Se han eliminado "grid" y "md:grid-cols-2" de la siguiente línea -->
+                        <div class="gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
                             <div class="pr-0 md:pr-8">
-                                <h3 class="text-3xl font-bold text-gray-900">Crea experiencias interactivas que convierten</h3>
-                                <p class="mt-4 text-lg text-subtitle">Captura leads desde tus campañas, personaliza el contenido en tu web de forma dinámica y segmenta audiencias basándote en conversaciones para un marketing más efectivo.</p>
+                                <h3 class="text-3xl font-bold text-gray-900">Crea onboardings más efectivos</h3>
+                                <p class="mt-4 text-lg text-subtitle">Automatiza el flujo y tareas de bienvenida para los nuevos integrantes, y permite que Fran solucione todas las dudas que tengan en esta etapa.</p>
                             </div>
-                            <img src="https://placehold.co/600x450/FEF3C7/92400E?text=Flujo+de+Marketing" class="rounded-xl shadow-md w-full h-full object-cover" alt="Flujo de una campaña de marketing interactiva">
+                            <!-- <img src="https://placehold.co/600x450/FEF3C7/92400E?text=Flujo+de+Marketing" class="rounded-xl shadow-md w-full h-full object-cover" alt="Flujo de una campaña de marketing interactiva"> -->
                         </div>
                     </div>
-                     <!-- Panel RRHH -->
+                    <!-- Panel RRHH -->
                     <div data-tab-content="hr" class="tab-panel transition-opacity duration-500 ease-in-out opacity-0 absolute top-0 left-0 w-full hidden">
-                         <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                        <!-- Se han eliminado "grid" y "md:grid-cols-2" de la siguiente línea -->
+                        <div class="gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
                             <div class="pr-0 md:pr-8">
                                 <h3 class="text-3xl font-bold text-gray-900">Automatiza tareas internas repetitivas</h3>
-                                <p class="mt-4 text-lg text-subtitle">Gestiona el onboarding de nuevos empleados, responde preguntas sobre políticas internas, procesa solicitudes de vacaciones y optimiza los flujos de trabajo de aprobación.</p>
+                                <p class="mt-4 text-lg text-subtitle">Que tu equipo no se ahogue en las tareas en lugar de estar mejorando la operación, permite que LockedInWork haga lo repetitivo para que tu equipo agregue valor.</p>
                             </div>
-                            <img src="https://placehold.co/600x450/FEE2E2/991B1B?text=Portal+de+RRHH" class="rounded-xl shadow-md w-full h-full object-cover" alt="Portal de onboarding automatizado para empleados">
+                            <!-- <img src="https://placehold.co/600x450/FEE2E2/991B1B?text=Portal+de+RRHH" class="rounded-xl shadow-md w-full h-full object-cover" alt="Portal de onboarding automatizado para empleados"> -->
                         </div>
                     </div>
                 </div>
@@ -283,3 +318,47 @@
 </script>
 </body>
 </html>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-white pt-24 pb-12 border-t border-gray-200">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-8">
+            <div class="col-span-2 mb-8 md:mb-0">
+                <a href="#" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
+                <p class="mt-4 text-sm text-gray-500 max-w-xs">Dedícate a lo que hace la diferencia, déjale el resto a la IA.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900">Producto</h4>
+                <ul class="mt-4 space-y-3 text-subtitle">
+                    <li><a href="solutions.html" class="hover:text-indigo-600 transition-colors">Soluciones</a></li>
+                    <!-- <li><a href="#" class="hover:text-indigo-600 transition-colors">Integraciones</a></li> -->
+                    <li><a href="pricing.html" class="hover:text-indigo-600 transition-colors">Precios</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900">Empresa</h4>
+                <ul class="mt-4 space-y-3 text-subtitle">
+                    <!--<li><a href="#" class="hover:text-indigo-600 transition-colors">Sobre nosotros</a></li> -->
+                    <li><a href="https://wa.me//56997795188?text=¡Hola!%20Estoy%20interesado%20en%20ver%20cómo%20la%20IA%20puede%20ayudar%20a%20mi%20empresa%20" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- <div>
+                <h4 class="font-bold text-gray-900">Recursos</h4>
+                <ul class="mt-4 space-y-3 text-subtitle">
+                    <li><a href="#" class="hover:text-indigo-600 transition-colors">Documentación</a></li>
+                    <li><a href="#" class="hover:text-indigo-600 transition-colors">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900">Legal</h4>
+                <ul class="mt-4 space-y-3 text-subtitle">
+                    <li><a href="#" class="hover:text-indigo-600 transition-colors">Privacidad</a></li>
+                    <li><a href="#" class="hover:text-indigo-600 transition-colors">Términos</a></li>
+                </ul>
+            </div> -->
+        </div>
+        <div class="mt-12 border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm">&copy; 2025 LockedInWork. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
