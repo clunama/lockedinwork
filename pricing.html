@@ -10,7 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="LIW" />
+<link rel="manifest" href="/site.webmanifest" />
 
     <style>
         body {
@@ -33,85 +38,173 @@
 </head>
 <body class="antialiased">
 
-    <!-- ===== COPIA Y PEGA ESTE HEADER EN TODAS TUS PÁGINAS ===== -->
-<header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80 relative">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
-        <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
-           <!--  <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a> -->
-            <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
-            <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a>
-            <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
-            <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a>
-        </nav>
-        <div class="hidden md:flex items-center space-x-3">
-            <a href="#contact" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
-            <a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+    <!-- ===== HEADER ===== -->
+    <header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80 relative">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
+            <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
+                <!-- <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a> -->
+                <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
+                <!--<a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a> -->
+                <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
+                <!--<a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a> -->
+            </nav>
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="https://calendly.com/carlos-lockedinwork/30min"  target="_blank" rel="noopener noreferrer" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+                <!--<a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>-->
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
         </div>
-        <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
-    </div>
-    
-    <!-- PANEL DEL MENÚ MÓVIL (CORREGIDO) -->
-    <div id="mobile-menu-panel" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-40">
-        <div class="flex flex-col p-4 space-y-2">
-            <!-- <a href="products.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Productos</a> -->
-            <a href="solutions.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Soluciones</a>
-            <a href="experiences.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Experiencias</a>
-            <a href="pricing.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Precios</a>
-            <a href="company.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Empresa</a>
-            <div class="border-t border-gray-200 mt-4 pt-4 flex flex-col space-y-3">
-                <a href="#contact" class="w-full text-center text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
-                <a href="#login" class="w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>
+        
+        <!-- PANEL DEL MENÚ MÓVIL -->
+        <div id="mobile-menu-panel" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+            <div class="flex flex-col p-4 space-y-2">
+                <!-- <a href="products.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Productos</a> -->
+                <a href="solutions.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Soluciones</a>
+                <!--<a href="experiences.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Experiencias</a> -->
+                <a href="pricing.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Precios</a>
+                <!--<a href="company.html" class="px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-800 font-medium">Empresa</a> -->
+                <div class="border-t border-gray-200 mt-4 pt-4 flex flex-col space-y-3">
+                    <a href="https://calendly.com/carlos-lockedinwork/30min"  target="_blank" rel="noopener noreferrer" class="w-full text-center text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
+                    <!--<a href="#login" class="w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>-->
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <main>
         <!-- ===== SECCIÓN DE PRECIOS CORREGIDA ===== -->
         <section id="pricing" class="py-24">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <p class="font-bold text-indigo-600 uppercase tracking-widest">PRECIOS FLEXIBLES</p>
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3">El plan perfecto para tu equipo</h2>
+                    <p class="font-bold text-indigo-600 uppercase tracking-widest">NOS ADAPTAMOS A TI</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3">El plan perfecto para tus necesidades</h2>
                     <p class="mt-4 max-w-2xl mx-auto text-lg text-subtitle">Escala a tu ritmo. Sin compromisos, sin sorpresas.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
                     
-                    <!-- Plan Gratis -->
+                    <!-- Plan Starter -->
                     <div class="bg-white p-8 rounded-2xl border border-gray-200 flex flex-col shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
                         <div class="flex-grow">
-                            <h3 class="text-2xl font-bold text-gray-900">Gratis</h3>
-                            <p class="mt-2 text-subtitle">Para probar y proyectos personales.</p>
-                            <p class="mt-6 text-4xl font-bold text-gray-900">$0<span class="text-lg font-medium text-subtitle">/mes</span></p>
-                            <ul class="mt-8 space-y-4 text-subtitle">
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>1 Agente de IA</span></li>
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>500 interacciones/mes</span></li>
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Integración Web Chat</span></li>
-                            </ul>
-                        </div>
-                        <a href="#" class="mt-8 w-full text-center bg-white text-gray-800 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all duration-300">
-                            Empezar ahora
+                            <h3 class="text-2xl font-bold text-gray-900">Starter</h3>
+                            <p class="mt-1 text-subtitle">Para probar y proyectos medianos.</p>
+                            <p class="mt-4 text-4xl font-bold text-gray-900">US$100<span class="text-lg font-medium text-subtitle">/mes</span></p>
+                            
+                            <div class="mt-2 space-y-3 text-subtitle">
+                                
+                                <h4 class="text-sm font-semibold text-gray-500 pt-2">Productos</h4>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Fran con un objetivo</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">LiwInbox con Whatsapp</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">1 usuario para LiwInbox</span>
+                                </div>
+                                <h4 class="text-sm font-semibold text-gray-500 pt-4">Servicios</h4>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Informe mensual de interacciones</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Google Gemini Flash 2.5 para Fran</span>
+                                </div>                                
+                            </div>
+                        </div>                        
+                        <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-8 w-full text-center bg-white text-gray-800 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all duration-300">
+                            Conversemos
                         </a>
-                    </div>
+                    </div>    
                     
-                    <!-- Plan Pro (Destacado) -->
+                    <!-- Plan Scale (Destacado) -->
                     <div class="bg-white p-8 rounded-2xl border-2 border-indigo-600 flex flex-col relative shadow-xl shadow-indigo-500/20">
                         <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Más Popular</span>
                         <div class="flex-grow">
-                            <h3 class="text-2xl font-bold text-gray-900">Pro</h3>
+                            <h3 class="text-2xl font-bold text-gray-900">Scale</h3>
                             <p class="mt-2 text-subtitle">Para startups y equipos en crecimiento.</p>
-                            <p class="mt-6 text-4xl font-bold text-gray-900">$99<span class="text-lg font-medium text-subtitle">/mes</span></p>
-                            <ul class="mt-8 space-y-4 text-subtitle">
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>10 Agentes de IA</span></li>
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>10,000 interacciones/mes</span></li>
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Integraciones (Slack, WhatsApp)</span></li>
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Acceso a API</span></li>
-                            </ul>
+                            <p class="mt-6 text-4xl font-bold text-gray-900">US$250<span class="text-lg font-medium text-subtitle">/mes</span></p>
+                            <div class="mt-5 space-y-3 text-subtitle">
+                                <h4 class="text-sm font-semibold text-gray-500 pt-2">Productos</h4>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Fran con hasta 3 objetivos distintos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">LiwInbox con Whatsapp, Instagram y Facebook Messenger</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">3 usuarios para LiwInbox</span>
+                                </div>
+                                <h4 class="text-sm font-semibold text-gray-500 pt-4">Servicios</h4>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Informe quncenal de interacciones</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Gemini, Claude y ChatGPT a disposición en sus modelos básicos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Avisos de Fran en Slack, Teams o WhatsApp para tomar el control</span>
+                                </div>
+                            </div>
                         </div>
-                        <a href="#" class="mt-8 w-full text-center bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/20">
-                            Probar gratis
+                        <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-8 w-full text-center bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/20">
+                            Conversemos
+                        </a>
+                    </div>
+
+                    <!-- Plan Business (Actualizado) -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 flex flex-col shadow-sm transition-all duration-300 hover:shadow-lg hover:border-indigo-300/50 hover:-translate-y-1">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Business</h3>
+                            <p class="mt-2 text-subtitle">Para equipos consolidados.</p>
+                            <p class="mt-6 text-4xl font-bold text-gray-900">US$650<span class="text-lg font-medium text-subtitle">/mes</span></p>
+                            <div class="mt-5 space-y-3 text-subtitle">
+                                
+                                <h4 class="text-sm font-semibold text-gray-500 pt-2">Productos</h4>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Fran con hasta 9 objetivos distintos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">LiwInbox con todos sus canales</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">10 usuarios para LiwInbox</span>
+                                </div>
+                                <h4 class="text-sm font-semibold text-gray-500 pt-4">Servicios</h4>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Informe diario de interacciones</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-indigo-600 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm font-semibold text-gray-800">Alertas de Fran cuando identifique reclamos repetitivos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Los mejores modelos de IA a disposición</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-sm">Avisos de Fran en Slack, Teams o WhatsApp para tomar el control</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-8 w-full text-center bg-white text-gray-800 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all duration-300">
+                            Conversemos
                         </a>
                     </div>
 
@@ -122,13 +215,13 @@
                             <p class="mt-2 text-subtitle">Para organizaciones a gran escala.</p>
                             <p class="mt-6 text-3xl font-bold text-gray-900">Personalizado</p>
                             <ul class="mt-8 space-y-4 text-subtitle">
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Agentes y volumen ilimitado</span></li>
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Soporte Premium 24/7</span></li>
-                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Seguridad y SSO avanzados</span></li>
+                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Agentes de voz impulsados por IA para llamar a tus clientes</span></li>
+                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Más todo lo de los planes anteriores</span></li>
+                                <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Todo lo extra que necesites</span></li>
                             </ul>
                         </div>
-                        <a href="#" class="mt-8 w-full text-center bg-white text-gray-800 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all duration-300">
-                            Hablar con ventas
+                        <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-8 w-full text-center bg-white text-gray-800 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all duration-300">
+                            Conversemos
                         </a>
                     </div>
                 </div>
@@ -227,3 +320,47 @@
     </script>
 </body>
 </html>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-white pt-24 pb-12 border-t border-gray-200">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-8">
+            <div class="col-span-2 mb-8 md:mb-0">
+                <a href="#" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
+                <p class="mt-4 text-sm text-gray-500 max-w-xs">Dedícate a lo que hace la diferencia, déjale el resto a la IA.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900">Producto</h4>
+                <ul class="mt-4 space-y-3 text-subtitle">
+                    <li><a href="solutions.html" class="hover:text-indigo-600 transition-colors">Soluciones</a></li>
+                    <!-- <li><a href="#" class="hover:text-indigo-600 transition-colors">Integraciones</a></li> -->
+                    <li><a href="pricing.html" class="hover:text-indigo-600 transition-colors">Precios</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900">Empresa</h4>
+                <ul class="mt-4 space-y-3 text-subtitle">
+                    <!--<li><a href="#" class="hover:text-indigo-600 transition-colors">Sobre nosotros</a></li> -->
+                    <li><a href="https://wa.me//56997795188?text=¡Hola!%20Estoy%20interesado%20en%20ver%20cómo%20la%20IA%20puede%20ayudar%20a%20mi%20empresa%20" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- <div>
+                <h4 class="font-bold text-gray-900">Recursos</h4>
+                <ul class="mt-4 space-y-3 text-subtitle">
+                    <li><a href="#" class="hover:text-indigo-600 transition-colors">Documentación</a></li>
+                    <li><a href="#" class="hover:text-indigo-600 transition-colors">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900">Legal</h4>
+                <ul class="mt-4 space-y-3 text-subtitle">
+                    <li><a href="#" class="hover:text-indigo-600 transition-colors">Privacidad</a></li>
+                    <li><a href="#" class="hover:text-indigo-600 transition-colors">Términos</a></li>
+                </ul>
+            </div> -->
+        </div>
+        <div class="mt-12 border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm">&copy; 2025 LockedInWork. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
