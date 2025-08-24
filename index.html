@@ -71,19 +71,23 @@
     <!-- ===== HEADER ===== -->
     <header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80 relative">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
-            <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
-                <!-- <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a> -->
-                <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
-                <!--<a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a> -->
-                <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
-                <!--<a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a> -->
-            </nav>
-            <div class="hidden md:flex items-center space-x-3">
-                <a href="https://calendly.com/carlos-lockedinwork/30min"  target="_blank" rel="noopener noreferrer" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
-                <!--<a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>-->
+            <!-- INICIO DE LA MODIFICACIÓN: Añadir este div contenedor -->
+            <div class="flex items-center gap-x-8">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
+                <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
+                    <!-- <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a> -->
+                    <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
+                    <!-- <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a> -->
+                    <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
+                    <!-- <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a> -->
+                </nav>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+            <!-- FIN DE LA MODIFICACIÓN -->
+            
+            <div class="hidden md:flex items-center space-x-3">
+                <!-- ... tus botones de la derecha ... -->
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">...</button>
         </div>
         
         <!-- PANEL DEL MENÚ MÓVIL -->
@@ -115,7 +119,7 @@
                     Agentes de IA conversacionales, automatización de procesos y análisis de datos en una sola plataforma.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="https://wa.me//56997795188?text=¡Hola!%20Estoy%20interesado%20en%20ver%20cómo%20la%20IA%20puede%20ayudar%20a%20mi%20empresa%20"  target="_blank" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/20">
+                    <a href="https://wa.me//56951430344?text=¡Hola!%20Estoy%20interesado%20en%20ver%20cómo%20la%20IA%20puede%20ayudar%20a%20mi%20empresa%20"  target="_blank" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/20">
                         Prueba nuestra IA
                     </a>
                     <a href="https://calendly.com/carlos-lockedinwork/30min"  target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 font-semibold px-8 py-3 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all duration-300">

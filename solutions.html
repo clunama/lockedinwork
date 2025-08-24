@@ -36,19 +36,23 @@
     <!-- ===== HEADER ===== -->
     <header id="main-header" class="w-full bg-white/80 backdrop-blur-lg z-50 sticky top-0 border-b border-gray-200/80 relative">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
-            <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
-                <!-- <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a> -->
-                <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
-                <!--<a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a> -->
-                <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
-                <!--<a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a> -->
-            </nav>
-            <div class="hidden md:flex items-center space-x-3">
-                <a href="https://calendly.com/carlos-lockedinwork/30min"  target="_blank" rel="noopener noreferrer" class="text-gray-700 bg-white font-semibold px-5 py-2.5 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Hablemos</a>
-                <!--<a href="#login" class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">Iniciar Sesión</a>-->
+            <!-- INICIO DE LA MODIFICACIÓN: Añadir este div contenedor -->
+            <div class="flex items-center gap-x-8">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">LockedIn<span class="text-indigo-600">Work</span></a>
+                <nav class="hidden md:flex items-center space-x-2 text-gray-800 font-medium">
+                    <!-- <a href="products.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Productos</a> -->
+                    <a href="solutions.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Soluciones</a>
+                    <!-- <a href="experiences.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Experiencias</a> -->
+                    <a href="pricing.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Precios</a>
+                    <!-- <a href="company.html" class="px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">Empresa</a> -->
+                </nav>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-800"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+            <!-- FIN DE LA MODIFICACIÓN -->
+            
+            <div class="hidden md:flex items-center space-x-3">
+                <!-- ... tus botones de la derecha ... -->
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">...</button>
         </div>
         
         <!-- PANEL DEL MENÚ MÓVIL -->
@@ -81,21 +85,31 @@
             </div>
         </section>
 
-        <!-- ===== FEATURE 1: AGENTES CONVERSACIONALES (SIN CAMBIOS) ===== -->
-        <section class="py-24 bg-white">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div class="pr-0 md:pr-8">
-                    <p class="font-bold text-indigo-600 uppercase tracking-widest">Fran</p>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-3">El Agente IA que razona y actúa.</h2>
-                    <p class="mt-4 text-lg text-subtitle">Ve más allá de los chatbots. Fran entiende la intención, mantiene el contexto y ejecuta tareas complejas en tus sistemas para mejorar la experiencia de tus clientes o de tu equipo.</p>
-                </div>
-                <div class="rounded-2xl shadow-xl overflow-hidden h-96"> <!-- Marco con altura fija y recorte -->
-                    <img src="images/fran_frontal.jpg" 
-                         class="w-full h-full object-contain object-top" 
-                         alt="Fran, el agente de IA de LockedInWork">
-                </div>
-            </div>
-        </section>
+<!-- ===== FEATURE 1: AGENTES CONVERSACIONALES (CORREGIDO) ===== -->
+<section class="py-24 bg-white">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        
+        <!-- El bloque de texto ahora también contiene el botón -->
+        <div class="pr-0 md:pr-8">
+            <p class="font-bold text-indigo-600 uppercase tracking-widest">Fran</p>
+            <h2 class="text-4xl font-bold text-gray-900 mt-3">El Agente IA que razona y actúa.</h2>
+            <p class="mt-4 text-lg text-subtitle">Ve más allá de los chatbots. Fran entiende la intención, mantiene el contexto y ejecuta tareas complejas en tus sistemas para mejorar la experiencia de tus clientes o de tu equipo.</p>
+            
+            <!-- EL BOTÓN HA SIDO MOVIDO AQUÍ DENTRO -->
+            <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-indigo-600 text-white font-semibold py-2.5 px-5 rounded-lg hover:bg-indigo-700 transition-all duration-300">
+                Conocer más
+            </a>
+        </div>
+
+        <!-- El bloque de la imagen no cambia -->
+        <div class="rounded-2xl shadow-xl overflow-hidden h-96">
+            <img src="images/fran_frontal.jpg" 
+                 class="w-full h-full object-contain object-top" 
+                 alt="Fran, el agente de IA de LockedInWork">
+        </div>
+
+    </div>
+</section>
 
         <!-- ===== FEATURE 2: LIWINBOX TODO EN UN SOLO LUGAR ===== -->
         <section class="py-24">
@@ -104,6 +118,9 @@
                     <p class="font-bold text-indigo-600 uppercase tracking-widest">LIWINBOX</p>
                     <h2 class="text-4xl font-bold text-gray-900 mt-3">Todo en un solo lugar</h2>
                     <p class="mt-4 text-lg text-subtitle">Atiende todos tus canales de contacto con usuarios desde una sola bandeja, permitiendote tener control de lo que responde nuestra IA y de lo que agrega tu equipo.</p>
+                    <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-indigo-600 text-white font-semibold py-2.5 px-5 rounded-lg hover:bg-indigo-700 transition-all duration-300">
+                        Ver más info
+                    </a>
                 </div>
                 <div class="rounded-2xl shadow-xl overflow-hidden h-96"> <!-- Marco con altura fija y recorte -->
                     <img src="images/liwinbox.jpg" 
@@ -120,6 +137,9 @@
                     <p class="font-bold text-indigo-600 uppercase tracking-widest">DATA DRIVEN</p>
                     <h2 class="text-4xl font-bold text-gray-900 mt-3">Cada ejecución de IA es un dato, no lo pierdas</h2>
                     <p class="mt-4 text-lg text-subtitle">LockedInWork quiere ser tu consultor de datos constante, obten insighs de cada conversación, y reportes de cada proceso, simplemente en segundos.</p>
+                    <a href="https://calendly.com/carlos-lockedinwork/30min" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-indigo-600 text-white font-semibold py-2.5 px-5 rounded-lg hover:bg-indigo-700 transition-all duration-300">
+                        Solicita una Demo
+                    </a>
                 </div>
                 <div class="rounded-2xl shadow-xl overflow-hidden h-96bg-white p-8"> <!-- Marco con altura fija y recorte -->
                     <img src="images/graficos_liw.jpg" 
@@ -150,17 +170,19 @@
                 <div id="tabs-content" class="relative">
                     <!-- Panel Soporte -->
                     <div data-tab-content="support" class="tab-panel transition-opacity duration-500 ease-in-out opacity-100">
-                        <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                        <!-- Se han eliminado "grid" y "md:grid-cols-2" de la siguiente línea -->
+                        <div class="gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
                             <div class="pr-0 md:pr-8">
                                 <h3 class="text-3xl font-bold text-gray-900">Resuelve consultas al instante, 24/7</h3>
                                 <p class="mt-4 text-lg text-subtitle">Automatiza la clasificación de tickets, responde preguntas frecuentes y escala solo los casos complejos a agentes humanos con todo el contexto necesario.</p>
-                             </div>
+                            </div>
                             <!-- <img src="https://placehold.co/600x450/E0E7FF/3730A3?text=Dashboard+de+Soporte" class="rounded-xl shadow-md w-full h-full object-cover" alt="Dashboard de soporte al cliente automatizado"> -->
                         </div> 
                     </div>
                     <!-- Panel Ventas -->
                     <div data-tab-content="sales" class="tab-panel transition-opacity duration-500 ease-in-out opacity-0 absolute top-0 left-0 w-full hidden">
-                         <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                        <!-- Se han eliminado "grid" y "md:grid-cols-2" de la siguiente línea -->
+                        <div class="gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
                             <div class="pr-0 md:pr-8">
                                 <h3 class="text-3xl font-bold text-gray-900">Nunca pierdas un lead</h3>
                                 <p class="mt-4 text-lg text-subtitle">Multiplica la efectividad de tu inversión publicitaria al estar siempre disponible para tus prospectos y clasifícalos para que tu equipo solo meta los goles.</p>
@@ -170,20 +192,22 @@
                     </div>
                     <!-- Panel Marketing -->
                     <div data-tab-content="marketing" class="tab-panel transition-opacity duration-500 ease-in-out opacity-0 absolute top-0 left-0 w-full hidden">
-                         <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                        <!-- Se han eliminado "grid" y "md:grid-cols-2" de la siguiente línea -->
+                        <div class="gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
                             <div class="pr-0 md:pr-8">
                                 <h3 class="text-3xl font-bold text-gray-900">Crea onboardings más efectivos</h3>
                                 <p class="mt-4 text-lg text-subtitle">Automatiza el flujo y tareas de bienvenida para los nuevos integrantes, y permite que Fran solucione todas las dudas que tengan en esta etapa.</p>
                             </div>
                             <!-- <img src="https://placehold.co/600x450/FEF3C7/92400E?text=Flujo+de+Marketing" class="rounded-xl shadow-md w-full h-full object-cover" alt="Flujo de una campaña de marketing interactiva"> -->
-                        </div> -->
+                        </div>
                     </div>
-                     <!-- Panel RRHH -->
+                    <!-- Panel RRHH -->
                     <div data-tab-content="hr" class="tab-panel transition-opacity duration-500 ease-in-out opacity-0 absolute top-0 left-0 w-full hidden">
-                         <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                        <!-- Se han eliminado "grid" y "md:grid-cols-2" de la siguiente línea -->
+                        <div class="gap-12 items-center bg-white p-8 md:p-12 rounded-2xl shadow-lg">
                             <div class="pr-0 md:pr-8">
                                 <h3 class="text-3xl font-bold text-gray-900">Automatiza tareas internas repetitivas</h3>
-                                <p class="mt-4 text-lg text-subtitle">Que tu equipo mo se ahogue en las tareas en lugar de estar mejorando la operación, permite que LockedInWork haga lo repetitivo para que tu equpo agregue valor.</p>
+                                <p class="mt-4 text-lg text-subtitle">Que tu equipo no se ahogue en las tareas en lugar de estar mejorando la operación, permite que LockedInWork haga lo repetitivo para que tu equipo agregue valor.</p>
                             </div>
                             <!-- <img src="https://placehold.co/600x450/FEE2E2/991B1B?text=Portal+de+RRHH" class="rounded-xl shadow-md w-full h-full object-cover" alt="Portal de onboarding automatizado para empleados"> -->
                         </div>
